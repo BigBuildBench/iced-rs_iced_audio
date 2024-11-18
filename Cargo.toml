@@ -1,0 +1,33 @@
+[package]
+name = "iced_audio"
+version = "0.12.0"
+authors = ["Billy Messenger <https://github.com/BillyDM>"]
+license = "MIT"
+edition = "2021"
+keywords = ["iced", "gui", "audio", "vst", "lv2"]
+categories = ["gui", "visualization"]
+description = "An extension to the Iced GUI library with useful widgets for audio applications"
+homepage = "https://github.com/iced-rs/iced_audio"
+documentation = "https://docs.rs/iced_audio"
+repository = "https://github.com/iced-rs/iced_audio"
+readme = "README.md"
+resolver = "2"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[workspace]
+members = [
+    "examples/simple",
+    "examples/inputs_tour",
+]
+
+[features]
+default = ["wgpu"]
+glow = ["iced_glow"]
+wgpu = ["iced_wgpu"]
+
+[dependencies]
+
+[dev-dependencies]
+iced = "0.9"
